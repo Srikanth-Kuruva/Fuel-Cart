@@ -1,0 +1,95 @@
+/* Main container for the service provider home page */
+.sp-home-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Title styling */
+  .sp-home-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  /* Message when no requests are available */
+  .no-requests-msg {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #95a5a6;
+    margin-top: 50px;
+  }
+  
+  /* Styling the request cards */
+  .requests-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    cursor:cell;
+  }
+  
+  .request-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .request-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .request-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .request-message, .request-status, .customer-info {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin: 5px 0;
+  }
+  
+  /* Buttons for actions */
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .accept-btn, .decline-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accept-btn {
+    background-color: #27ae60;
+    color: #ffffff;
+  }
+  
+  .accept-btn:hover {
+    background-color: #2ecc71;
+  }
+  
+  .decline-btn {
+    background-color: #e74c3c;
+    color: #ffffff;
+  }
+  
+  .decline-btn:hover {
+    background-color: #c0392b;
+  }
+  

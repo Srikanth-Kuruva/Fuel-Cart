@@ -1,0 +1,179 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.front-page {
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    animation: backgroundChange 10s infinite; 
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.get-started {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.get-started:hover {
+    background-color: #0056b3;
+}
+
+.features {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.feature {
+    margin: 20px;
+    display: inline-block;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.feature img {
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover img {
+    transform: scale(1.05);
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+
+@keyframes backgroundChange {
+    0% {
+        background-image: url('https://buildindigital.com/wp-content/uploads/2021/08/shutterstock_1382452037-scaled.jpg');
+    }
+    33% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBZ6y4gZZebvYD-hwFNo6N66rzOiGuwrYwjg&s');
+    }
+    66% {
+        background-image: url('https://www.checkatrade.com/blog/wp-content/uploads/2021/07/Feature-mechanic-hourly-rate-uk.jpg');
+    }
+    100% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDahk2fE6JSjSgNL8uU-CcdmdNxoz0aPgvEw&s');
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .get-started {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+    }
+
+    .feature {
+        width: 100%;
+    }
+}
